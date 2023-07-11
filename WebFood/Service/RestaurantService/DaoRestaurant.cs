@@ -28,9 +28,9 @@ namespace WebFood.Service.RestaurantService
             return await _db.Restaurants.ToListAsync();
         }
 
-        public Task<Restaurant> GetAsync(int id)
+        public async Task<Restaurant> GetAsync(int id)
         {
-           return _db.Restaurants.FirstOrDefaultAsync(r => r.Id == id);
+           return await _db.Restaurants.FirstAsync(r => r.Id == id);
         }
 
         public void Update(Restaurant restaurant)
