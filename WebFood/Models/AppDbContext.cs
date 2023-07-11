@@ -9,6 +9,7 @@ namespace WebPlanner.Models
         {
         }
 
+
         public DbSet<User> Users { get; set; }
         public DbSet<Restaurant> Restaurants { get; set;}
         public DbSet<TypeOfRestaurant> TypesOfRestaurants { get; set; }
