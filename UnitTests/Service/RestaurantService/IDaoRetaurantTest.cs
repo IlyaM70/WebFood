@@ -7,7 +7,10 @@ using Microsoft.EntityFrameworkCore;
 //using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using WebFood.Service.RestaurantService;
+using WebPlanner.Models;
 
 namespace UnitTests.Service.RestaurantService
 {
@@ -18,7 +21,7 @@ namespace UnitTests.Service.RestaurantService
         private DaoRestaurant service;
         private CancellationToken cancellationToken = CancellationToken.None;
         private IQueryable<Restaurant> mockRestaurants;
-         
+
 
 
         [SetUp]
@@ -82,7 +85,7 @@ namespace UnitTests.Service.RestaurantService
             mockContext.Verify(m => m.SaveChanges(), Times.Once());
         }
 
-
+            
         [Test]
         public async Task GetAllAsync()
         {
