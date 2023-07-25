@@ -2,25 +2,29 @@
 using WebFood.Models.Entities;
 using WebFood.Utility;
 
-namespace WebPlanner.Models
+namespace WebFood.Models
 {
     public class AppDbContext : DbContext
     {
+        public AppDbContext()
+        {
+                
+        }
         public AppDbContext(DbContextOptions options) : base(options)
         {
         }
 
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<UserRole> UserRoles { get; set; }
-        public DbSet<Profile> Profiles { get; set; }
-        public DbSet<Restaurant> Restaurants { get; set; }
-        public DbSet<TypeOfRestaurant> TypesOfRestaurants { get; set; }
-        public DbSet<RestaurantType> RestaurantType { get; set; }
-        public DbSet<CategoryOfMeal> CategoriesOfMeals { get; set; }
-        public DbSet<Meal> Meals { get; set; }
-        public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderMeal> OrderMeal { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<UserRole> UserRoles { get; set; }
+        public virtual DbSet<Profile> Profiles { get; set; }
+        public virtual DbSet<Restaurant> Restaurants { get; set; }
+        public virtual DbSet<TypeOfRestaurant> TypesOfRestaurants { get; set; }
+        public virtual DbSet<RestaurantType> RestaurantType { get; set; }
+        public virtual DbSet<CategoryOfMeal> CategoriesOfMeals { get; set; }
+        public virtual DbSet<Meal> Meals { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<OrderMeal> OrderMeal { get; set; }
         
     }
 }
